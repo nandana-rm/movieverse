@@ -1,0 +1,50 @@
+{
+    "dataset_stats": {
+        "total_ratings": 1000209,
+        "total_movies": 3883,
+        "total_users": 6040,
+        "train_size": 800167,
+        "val_size": 100021,
+        "test_size": 100021,
+        "sparsity": 0.9573532020200125
+    },
+    "model_comparison": {
+        "Baseline": {
+            "MAE": 0.7866126790102399,
+            "RMSE": 0.983176466424425,
+            "Precision@10": 0.795817683374347,
+            "Recall@10": 0.44088949957447837,
+            "NDCG@10": 0.8614960042246872
+        },
+        "Item-Based KNN": {
+            "MAE": 0.9101048293598081,
+            "RMSE": 1.1038435886817821,
+            "Precision@10": 0.6739681820144195,
+            "Recall@10": 0.4083994900507475,
+            "NDCG@10": 0.7130025559892122
+        },
+        "Content-Based": {
+            "MAE": "N/A",
+            "RMSE": "N/A",
+            "Precision@10": "N/A",
+            "Recall@10": "N/A",
+            "NDCG@10": "N/A",
+            "Note": "Used for cold-start only"
+        },
+        "Collaborative (SVD)": {
+            "MAE": 0.764036486344522,
+            "RMSE": 0.9599965184405257,
+            "Precision@10": 0.8015293787505936,
+            "Recall@10": 0.44332066232397616,
+            "NDCG@10": 0.8708815502213667
+        }
+    },
+    "best_model": "Collaborative (SVD)",
+    "test_results": {
+        "MAE": 0.7170451867993928,
+        "RMSE": 0.915694607328468,
+        "Precision@10": 0.7729480653091765,
+        "Recall@10": 0.4586219919255539,
+        "NDCG@10": 0.8437698802118456
+    }
+}
