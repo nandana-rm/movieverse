@@ -153,13 +153,13 @@ export default function ResearchLab() {
             <div className="font-mono text-xs sm:text-sm text-slate-500 overflow-x-auto">
               <div className="inline-block text-left">
                 <div className="flex mb-4 border-b border-white/10 pb-2">
-                  <div className="w-24 font-bold text-slate-400">MOVIES →</div>
-                  <div className="w-12 text-center">M1</div>
-                  <div className="w-12 text-center">M2</div>
-                  <div className="w-12 text-center">M3</div>
-                  <div className="w-12 text-center">M4</div>
-                  <div className="w-12 text-center">M5</div>
-                  <div className="w-12 text-center">M6</div>
+                  <div className="w-16 md:w-24 font-bold text-slate-400">MOVIES →</div>
+                  <div className="w-8 md:w-12 text-center">M1</div>
+                  <div className="w-8 md:w-12 text-center">M2</div>
+                  <div className="w-8 md:w-12 text-center">M3</div>
+                  <div className="w-8 md:w-12 text-center">M4</div>
+                  <div className="w-8 md:w-12 text-center">M5</div>
+                  <div className="w-8 md:w-12 text-center">M6</div>
                 </div>
                 {[
                   [5, '·', 4, '·', '·', 3],
@@ -169,9 +169,9 @@ export default function ResearchLab() {
                   ['·', 2, '·', '·', '·', 5]
                 ].map((row, i) => (
                   <div key={i} className="flex mb-3">
-                    <div className="w-24 font-bold text-slate-400">USER {i+1}</div>
+                    <div className="w-16 md:w-24 font-bold text-slate-400">USER {i+1}</div>
                     {row.map((cell, j) => (
-                      <div key={j} className={`w-12 text-center ${cell !== '·' ? 'text-indigo-400 font-bold' : 'text-slate-700'}`}>
+                      <div key={j} className={`w-8 md:w-12 text-center ${cell !== '·' ? 'text-indigo-400 font-bold' : 'text-slate-700'}`}>
                         {cell}
                       </div>
                     ))}
@@ -211,7 +211,7 @@ export default function ResearchLab() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-3xl font-extrabold text-white tracking-tight pt-8"
+            className="text-2xl md:text-3xl font-extrabold text-white tracking-tight pt-8"
           >
             THAT IS THE RECOMMENDATION PROBLEM.
           </motion.h2>
@@ -236,13 +236,13 @@ export default function ResearchLab() {
             </div>
             
             <div className="flex h-12 rounded-lg overflow-hidden mb-8">
-              <div className="w-[80%] bg-indigo-600 flex items-center justify-center text-white font-bold text-sm border-r border-slate-900">
+              <div className="w-[80%] bg-indigo-600 flex items-center justify-center text-white font-bold text-[10px] sm:text-sm border-r border-slate-900">
                 TRAIN (80%)
               </div>
-              <div className="w-[10%] bg-purple-600 flex items-center justify-center text-white font-bold text-sm border-r border-slate-900">
+              <div className="w-[10%] bg-purple-600 flex items-center justify-center text-white font-bold text-[10px] sm:text-sm border-r border-slate-900">
                 VAL
               </div>
-              <div className="w-[10%] bg-slate-700 flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-[10%] bg-slate-700 flex items-center justify-center text-white font-bold text-[10px] sm:text-sm">
                 TEST
               </div>
             </div>

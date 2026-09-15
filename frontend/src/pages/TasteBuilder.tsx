@@ -117,7 +117,7 @@ export default function TasteBuilder() {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-xl border-b border-white/5 pt-6 pb-4 flex flex-col items-center text-center gap-6">
         <div className="px-6">
-          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-300 mb-2 tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-300 mb-2 tracking-tight">
             BUILD YOUR MOVIE DNA
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-lg mx-auto">
@@ -141,7 +141,7 @@ export default function TasteBuilder() {
 
         {/* Genre Pills */}
         <div className="w-full overflow-x-auto no-scrollbar border-t border-white/5 mt-2">
-          <div className="flex items-center gap-2 px-6 py-4 w-max mx-auto">
+          <div className="flex items-center gap-2 px-6 py-4 w-max md:mx-auto">
             {GENRES.map(genre => (
               <button
                 key={genre}
@@ -234,17 +234,17 @@ export default function TasteBuilder() {
       </div>
 
       {/* Sticky Selected Tray */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 pointer-events-none">
-        <div className="max-w-5xl mx-auto bg-slate-950/80 backdrop-blur-xl border border-indigo-500/30 rounded-2xl p-4 shadow-2xl flex flex-col md:flex-row items-center gap-6 pointer-events-auto">
+      <div className="fixed bottom-0 left-0 right-0 z-50 p-2 sm:p-4 md:p-6 pointer-events-none">
+        <div className="max-w-5xl mx-auto bg-slate-950/95 backdrop-blur-xl border border-indigo-500/30 rounded-xl sm:rounded-2xl p-2 sm:p-4 shadow-2xl flex flex-col md:flex-row items-center gap-2 sm:gap-6 pointer-events-auto">
           
-          <div className="flex items-center justify-between w-full md:w-auto md:min-w-[140px]">
-             <div>
-                <p className="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-1">Movie DNA</p>
-                <p className="text-2xl font-black text-white">{Math.min(selectedMovies.size, 5)} <span className="text-slate-500 text-lg">/ 5{selectedMovies.size >= 5 ? '+' : ''}</span></p>
+          <div className="flex items-center justify-between w-full md:w-auto md:min-w-[140px] px-2 sm:px-0">
+             <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-0 w-full md:w-auto">
+                <p className="text-[10px] sm:text-xs font-bold text-indigo-400 uppercase tracking-wider md:mb-1">Movie DNA</p>
+                <p className="text-lg sm:text-2xl font-black text-white">{Math.min(selectedMovies.size, 5)} <span className="text-slate-500 text-sm sm:text-lg">/ 5{selectedMovies.size >= 5 ? '+' : ''}</span></p>
              </div>
           </div>
           
-          <div className="flex-1 flex items-center gap-3 overflow-x-auto no-scrollbar w-full py-1">
+          <div className="flex-1 flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar w-full py-1 px-2 sm:px-0">
             <AnimatePresence>
               {Array.from(selectedMovies.entries()).map(([id, data]) => (
                 <MiniSelectedMovie 
@@ -256,17 +256,17 @@ export default function TasteBuilder() {
               ))}
             </AnimatePresence>
             {selectedMovies.size === 0 && (
-              <p className="text-slate-500 text-sm italic">Choose movies to build your profile...</p>
+              <p className="text-slate-500 text-xs sm:text-sm italic">Choose movies to build your profile...</p>
             )}
           </div>
 
           <button 
             onClick={handleBuildTaste}
             disabled={selectedMovies.size < 5}
-            className="w-full md:w-auto px-8 py-3.5 bg-indigo-600 disabled:bg-slate-800 disabled:text-slate-500 hover:bg-indigo-500 text-white rounded-xl font-bold transition-colors whitespace-nowrap shadow-lg shadow-indigo-600/20 disabled:shadow-none flex items-center justify-center gap-2 group"
+            className="w-full md:w-auto px-4 sm:px-8 py-2.5 sm:py-3.5 bg-indigo-600 disabled:bg-slate-800 disabled:text-slate-500 hover:bg-indigo-500 text-white rounded-lg sm:rounded-xl font-bold text-sm sm:text-base transition-colors whitespace-nowrap shadow-lg shadow-indigo-600/20 disabled:shadow-none flex items-center justify-center gap-2 group"
           >
             BUILD MY TASTE
-            <ChevronRight className={`w-5 h-5 ${selectedMovies.size >= 5 ? 'group-hover:translate-x-1 transition-transform' : ''}`} />
+            <ChevronRight className={`w-4 h-4 sm:w-5 sm:h-5 ${selectedMovies.size >= 5 ? 'group-hover:translate-x-1 transition-transform' : ''}`} />
           </button>
         </div>
       </div>

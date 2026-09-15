@@ -80,8 +80,8 @@ export default function MovieCard({ movie, onClick, isSelected, rating = 0, onRa
 
         {showMatch && movie.match_score && (
           <div className="flex items-center gap-1 mt-1">
-             <span className="text-xs font-medium text-amber-400 flex items-center gap-1">
-                <Star className="w-3 h-3 fill-amber-400" /> Taste Match: {Number(movie.match_score).toFixed(1)}% (Cosine Sim)
+             <span className="text-[10px] sm:text-xs font-medium text-amber-400 flex items-center gap-1">
+                <Star className="w-3 h-3 fill-amber-400 shrink-0" /> Taste Match: {Number(movie.match_score).toFixed(1)}% (Cosine Sim)
              </span>
           </div>
         )}
@@ -93,14 +93,14 @@ export default function MovieCard({ movie, onClick, isSelected, rating = 0, onRa
 
       {/* Rating UI for selected */}
       {isSelected && onRate && (
-        <div className="absolute top-0 left-0 right-0 bottom-0 z-30 p-3 bg-indigo-950/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-          <p className="text-xs font-bold text-indigo-200 mb-3 text-center uppercase tracking-wider bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-500/30">Rate this movie</p>
-          <div className="flex justify-center gap-2 bg-slate-900/80 p-2 rounded-full shadow-2xl">
+        <div className="absolute top-0 left-0 right-0 bottom-0 z-30 p-3 bg-indigo-950/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-100 sm:opacity-0 sm:hover:opacity-100 transition-opacity">
+          <p className="text-[10px] sm:text-xs font-bold text-indigo-200 mb-3 text-center uppercase tracking-wider bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-500/30">Rate this movie</p>
+          <div className="flex justify-center gap-1 sm:gap-2 bg-slate-900/80 p-1.5 sm:p-2 rounded-full shadow-2xl">
             {[1, 2, 3, 4, 5].map(star => (
               <Star 
                 key={star}
                 onClick={(e) => onRate(star, e)}
-                className={`w-6 h-6 cursor-pointer transition-transform hover:scale-110 ${star <= rating ? 'fill-amber-400 text-amber-400' : 'text-slate-600 hover:text-slate-400'}`}
+                className={`w-5 h-5 sm:w-6 sm:h-6 cursor-pointer transition-transform hover:scale-110 ${star <= rating ? 'fill-amber-400 text-amber-400' : 'text-slate-600 hover:text-slate-400'}`}
               />
             ))}
           </div>

@@ -59,7 +59,7 @@ export default function TasteReveal() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-300 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-300 mb-4">
             WE'VE MAPPED YOUR TASTE.
           </h2>
           <p className="text-xl text-slate-300 font-light mb-2">Based on the movies you selected and how you rated them.</p>
@@ -88,7 +88,7 @@ export default function TasteReveal() {
           
           <button 
             onClick={() => navigate('/recommendations')}
-            className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-[0_0_40px_-10px_rgba(79,70,229,0.5)] flex items-center justify-center gap-3 mx-auto uppercase tracking-wide group"
+            className="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold text-base md:text-lg transition-all duration-300 shadow-[0_0_40px_-10px_rgba(79,70,229,0.5)] flex items-center justify-center gap-3 mx-auto uppercase tracking-wide group"
           >
             <span>EXPLORE MY MOVIEVERSE</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>

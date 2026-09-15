@@ -48,9 +48,9 @@ export default function Recommendations() {
         </div>
         
         {/* Horizontal scroll rail */}
-        <div className="flex overflow-x-auto gap-4 pb-6 px-2 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
+        <div className="flex overflow-x-auto gap-4 pb-6 px-4 sm:px-6 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
           {movies.map((movie) => (
-            <div key={movie.MovieID} className="min-w-[200px] w-[200px] md:min-w-[240px] md:w-[240px] flex-shrink-0 snap-start h-[360px]">
+            <div key={movie.MovieID} className="w-[160px] md:w-[240px] flex-shrink-0 snap-start">
               <MovieCard 
                 movie={movie} 
                 showMatch={true}
@@ -65,7 +65,7 @@ export default function Recommendations() {
 
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col">
-      <header className="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-xl border-b border-white/5 py-4 px-6 flex items-center justify-between">
+      <header className="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-xl border-b border-white/5 py-4 px-4 sm:px-6 flex flex-wrap gap-4 items-center justify-between">
         <div className="flex items-center gap-6">
           <button 
             onClick={() => navigate('/build-taste')}
@@ -91,7 +91,7 @@ export default function Recommendations() {
         ) : (
           <div className="pt-6">
             <div className="mb-12 px-2">
-              <h1 className="text-4xl font-bold text-white mb-2">YOUR MOVIEVERSE</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">YOUR MOVIEVERSE</h1>
               <p className="text-indigo-400 text-lg font-medium">Picked for you based on your Movie DNA</p>
               <p className="text-slate-500 text-xs mt-1">New-user recommendations powered by content-based similarity.</p>
             </div>
@@ -108,13 +108,13 @@ export default function Recommendations() {
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <button 
                   onClick={() => navigate('/build-taste')}
-                  className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold uppercase tracking-wide transition-colors"
+                  className="w-full sm:w-auto px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold uppercase tracking-wide transition-colors"
                 >
                   ← Refine My Taste
                 </button>
                 <button 
                   onClick={() => setShowRestartConfirm(true)}
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-full font-bold uppercase tracking-wide transition-colors"
+                  className="w-full sm:w-auto px-8 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-full font-bold uppercase tracking-wide transition-colors"
                 >
                   Start Over
                 </button>

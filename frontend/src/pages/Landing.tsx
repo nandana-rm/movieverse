@@ -34,7 +34,7 @@ export default function Landing() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button 
               onClick={() => navigate('/build-taste')}
-              className="group relative px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-medium text-lg transition-all duration-300 shadow-[0_0_40px_-10px_rgba(79,70,229,0.5)] hover:shadow-[0_0_60px_-15px_rgba(79,70,229,0.7)] flex items-center gap-3 overflow-hidden"
+              className="w-full sm:w-auto group relative px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-medium text-lg transition-all duration-300 shadow-[0_0_40px_-10px_rgba(79,70,229,0.5)] hover:shadow-[0_0_60px_-15px_rgba(79,70,229,0.7)] flex items-center justify-center gap-3 overflow-hidden"
             >
               <span className="relative z-10">Build My Movie DNA</span>
               <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -43,7 +43,7 @@ export default function Landing() {
             
             <button 
               onClick={() => navigate('/research')}
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium text-lg transition-all duration-300 flex items-center gap-3 backdrop-blur-md"
+              className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium text-lg transition-all duration-300 flex items-center justify-center gap-3 backdrop-blur-md"
             >
               <BarChart2 className="w-5 h-5 text-indigo-400" />
               <span>HOW IT WORKS →</span>
@@ -53,8 +53,8 @@ export default function Landing() {
       </div>
       
       {/* Footer attribution */}
-      <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center justify-center gap-2 text-slate-600 text-sm">
-        <div className="flex items-center gap-3">
+      <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center justify-center gap-2 text-slate-600 text-xs sm:text-sm px-4">
+        <div className="flex flex-col md:flex-row items-center gap-3 text-center">
             <img 
               src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" 
               alt="TMDB Logo" 
