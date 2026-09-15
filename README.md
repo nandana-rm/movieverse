@@ -1,10 +1,10 @@
-# MovieVerse — Your Taste. Decoded.
+# MovieVerse
 
 ## 1. Project Overview
 MovieVerse is a machine learning-powered movie recommendation platform designed to deliver personalized content discovery. Built with a full-stack architecture, it leverages collaborative filtering techniques on historical rating data to model user preferences. The project is structured to ensure robust evaluation of recommendation algorithms, culminating in a production-ready web application.
 
 ## 2. Live Demo
-**[MovieVerse — Your Taste. Decoded.](https://frontend-1uqm61rzl-nandanamenon-3196s-projects.vercel.app/)**
+**[MovieVerse — Your Taste. Decoded.](https://frontend-six-xi-cr8ci6ut5t.vercel.app/)**
 
 The application is deployed with Vercel for the frontend and Render for the FastAPI backend.
 
